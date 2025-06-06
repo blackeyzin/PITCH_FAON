@@ -13,30 +13,29 @@ document.addEventListener("DOMContentLoaded", function() {
   const painel = document.querySelector(".painel-itens");
 
   function criarBilhete(texto) {
-    const novoBilhete = document.createElement("div");
-    novoBilhete.className = "bilhete";
+  const novoBilhete = document.createElement("div");
+  novoBilhete.className = "bilhete";
 
-    const paragrafo = document.createElement("p");
-    paragrafo.textContent = texto;
+  const paragrafo = document.createElement("p");
+  paragrafo.textContent = texto;
 
-    const pin = document.createElement('div');
-    pin.classList.add('pin');
-    novoBilhete.appendChild(pin);
+  const pin = document.createElement('div');
+  pin.classList.add('pin');
 
-    const botaoExcluir = document.createElement("button");
-    botaoExcluir.className = "excluir";
-    botaoExcluir.textContent = "×";
-    botaoExcluir.title = "Excluir bilhete";
+  const botaoExcluir = document.createElement("button");
+  botaoExcluir.className = "excluir";
+  botaoExcluir.textContent = "×";
+  botaoExcluir.title = "Excluir bilhete";
 
-    botaoExcluir.addEventListener("click", function() {
-      novoBilhete.remove();
-    });
+  botaoExcluir.addEventListener("click", function() {
+    novoBilhete.remove();
+  });
 
-    novoBilhete.appendChild(paragrafo);
-    novoBilhete.appendChild(pin);
-    novoBilhete.appendChild(botaoExcluir);
-    painel.appendChild(novoBilhete);
-  }
+  novoBilhete.appendChild(pin);
+  novoBilhete.appendChild(paragrafo);
+  novoBilhete.appendChild(botaoExcluir);
+  painel.appendChild(novoBilhete);
+}
 
   form.addEventListener("submit", function(e) {
     e.preventDefault();
