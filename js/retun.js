@@ -1,11 +1,11 @@
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
-    // Verifica se já estamos na index.html (ou painel.html, ou o que for sua tela principal)
-    const paginaAtual = window.location.pathname;
+    // Pega o nome do arquivo atual
+    const paginaAtual = window.location.pathname.split('/').pop();
 
-    if (!paginaAtual.endsWith('/index.html') && !paginaAtual.endsWith('/painel.html')) {
-      // Redireciona para a tela principal
-      window.location.href = 'painel.html'; // ou 'index.html', depende do nome da sua tela principal
+    // Só redireciona se NÃO estiver na página principal
+    if (paginaAtual !== 'painel.html' && paginaAtual !== 'index.html') {
+      window.location.href = 'painel.html'; // ou 'index.html' se for o seu caso
     }
   }
 });
