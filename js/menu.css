@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Brasika', serif;
+  background-color: #e8cace;
+}
+
+.menu-container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  gap: 30px;
+}
+
+.esquerda {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  margin-left: 220px; 
+    margin-top: 110px; 
+}
+
+.logo {
+  width: 35px;
+}
+
+.nome {
+  font-size: 24px;
+  font-weight: bold;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.user-icon {
+  width: 40px;
+}
+
+.painel.card {
+    margin-left: 400px; 
+    margin-top: 10px; 
+  width: 180px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.painel.card img {
+  width: 110%;
+  height: auto;
+}
+
+.painel.card p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.card.anotacoes p {
+  font-weight: bold;
+  height: 80px;
+  font-size: 30px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.direita {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 180px;
+  height: 210px;
+  position: relative;
+  left: -80px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  margin: 0;
+  
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card::after {
+  content: "+";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* Cores por tipo (opcional, para personalizar) */
+.calendario { background-color: #d06fb8; }
+.urgente { background-color: #b02a65; }
+.anotacoes { background-color: #d06fb8; }
+.diarios { background-color: #b02a65; }
+.semanais { background-color: #d06fb8; }
+.financeiros { background-color: #b02a65; }
+.painel { background-color: #5b4669; color: white; }
