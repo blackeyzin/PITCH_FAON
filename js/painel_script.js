@@ -19,11 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const paragrafo = document.createElement("p");
     paragrafo.textContent = texto;
 
-    const pin = document.createElement('img');
-    pin.src = 'pins/pin painel.png';
-    pin.alt = 'Pin';
-    pin.classList.add('pin-img');
-    bilhete.appendChild(pin);
+    const pin = document.createElement('div');
+    pin.classList.add('pin');
+    novoBilhete.appendChild(pin);
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.className = "excluir";
