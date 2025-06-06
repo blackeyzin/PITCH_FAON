@@ -1,37 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel - Agenda FOAN</title>
-  <link rel="stylesheet" href="painel.css">
+  <link rel="stylesheet" href="css/painel.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="painel-wrapper">
+    <!-- Cabeçalho -->
     <div class="painel-cabecalho">
       <div class="maps-img">
-        <img src="pins/maps.png" alt="maps"/>
+        <img src="pins/maps.png" alt="Maps" />
         <div class="pontinhos-img">
-          <img src="pins/pontinhos.png">
+          <img src="pins/pontinhos.png" alt="Pontinhos" />
         </div>
-        </div>
+      </div>
       <div class="icone-user">
-        <img src="pins/user.png" alt="Usuário">
-        
-    </div>
+        <img src="pins/user.png" alt="Usuário" />
+      </div>
     </div>
 
+    <!-- Data -->
+    <div class="data"></div>
+
+    <!-- Bilhetes -->
     <div class="painel-itens">
-       <div class="data"></div>
-      <!-- Bilhetes adicionados dinamicamente -->
+      <!-- Bilhetes serão adicionados aqui via JS -->
     </div>
 
+    <!-- Formulário -->
     <form id="form-adicionar">
-      <input type="text" id="texto-bilhete" placeholder="Digite seu bilhete...">
+      <input type="text" id="texto-bilhete" placeholder="Digite seu bilhete..." />
       <button type="submit">+</button>
     </form>
   </div>
 
-  <script src="js/painel_script.js"></script>
+  <!-- Script principal -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const data = new Date();
+      const dataFormatada = data.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+
+      document.querySelector(".data").textContent = dataFormatada;
+
+      const form = document.getElementById("form-adicionar");
+      const input = document.getElementById("texto-bilhete");
+      const painel = document.querySelector(".painel-itens");
+
+      function criarBilhete(texto) {
+        const novoBilhete = document.createElement("div");
+        novoBilhete.className = "bilhete";
+
+        const pin = document.createElement("div");
+        pin.className = "pin";
+
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = texto;
+
+        const botaoExcluir = document.createElement("button");
+        botaoExcluir.className = "excluir";
+        botaoExcluir.textContent = "×";
+        botaoExcluir.title = "Excluir bilhete";
+        botaoExcluir.addEventListener("click", () => novoBilhete.remove());
+
+        novoBilhete.appendChild(pin);
+        novoBilhete.appendChild(paragrafo);
+        novoBilhete.appendChild(botaoExcluir);
+        painel.appendChild(novoBilhete);
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const texto = input.value.trim();
+        if (texto !== "") {
+          criarBilhete(texto);
+          input.value = "";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
