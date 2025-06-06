@@ -97,15 +97,13 @@ body {
   min-height: 100px;
 }
 
-
-
 .pin {
   position: absolute;
   top: -15px;
   right: -10px;
   width: 40px;
   height: 40px;
-  background-image: url('pin\ painel.png');
+  background-image: url('pins/pin painel.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
