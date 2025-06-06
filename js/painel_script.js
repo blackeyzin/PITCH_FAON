@@ -45,11 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     criarBilhete(texto);
     input.value = "";
-
-    // Redirecionar com ESC
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    window.location.href = 'menu.html';
   }
 });
   });
