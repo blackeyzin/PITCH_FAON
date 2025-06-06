@@ -111,3 +111,18 @@ body {
 .register a:hover {
   color: #cdb7b7;
 }
+
+@media (max-width: 600px) {
+  .login-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .login-icon img {
+    width: 40px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+}
