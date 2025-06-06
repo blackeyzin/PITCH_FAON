@@ -1,11 +1,10 @@
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
-    // Pega o nome do arquivo atual
-    const paginaAtual = window.location.pathname.split('/').pop();
+    const pathname = window.location.pathname;
 
-    // Só redireciona se NÃO estiver na página principal
-    if (paginaAtual !== 'painel.html' && paginaAtual !== 'index.html') {
-      window.location.href = 'painel.html'; // ou 'index.html' se for o seu caso
+    // Verifica se está na raiz do projeto ou na index.html
+    if (pathname !== '/PITCH_FAON/' && pathname !== '/PITCH_FAON/index.html') {
+      window.location.href = '/PITCH_FAON/';
     }
   }
 });
