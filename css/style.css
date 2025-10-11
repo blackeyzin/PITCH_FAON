@@ -132,9 +132,7 @@ body {
   color: #cdb7b7;
 }
 
-/* ========================= */
-/* 📱 MEDIA QUERIES */
-/* ========================= */
+/* MEDIA QUERIES */
 
 @media (max-width: 900px) {
   .logo {
@@ -214,3 +212,4 @@ body {
     font-size: 16px;
   }
 }
+
