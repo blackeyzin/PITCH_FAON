@@ -1,5 +1,16 @@
 # PROJECT_FAON
-This repository is a simple way to clearly see what our team is doing to make the application work; <br>
+This repository is one way to clearly see what our team is doing to make the application work; <br>
 Here we will see the files and ideas used to develop the tool.
 
-https://blackeyzin.github.io/PITCH_FAON/
+## STUDENTS
+* ANA CAROLINE DE SOUZA                       RA: 424107503
+* CAROLINA HELENA COSTA DA SILVA              RA: 424105319
+* GABRIEL DOS SANTOS ORTIZ                    RA: 424105461
+* JOAO PAULO DE LIMA BELO                     RA: 424101329
+* PEDRO HENRIQUE LOPEZ DE GAMALHOES PEREIRA   RA: 424103768
+* NICOLAS DOS SANTOS BATISTA DA SILVA         RA: 424105865 <br>
+
+## SITE DISPONIVEL EM
+https://blackeyzin.github.io/PITCH_FAON/ <br>
+
+## VIDEO YOUTUBE EM
