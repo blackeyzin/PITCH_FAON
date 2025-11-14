@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="pins/logo.png" type="image/png">
+  <title>Objetivos Financeiros</title>
+  <style>
+    body {
+      background: #e8cace;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .titulo {
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      top: 30px;
+      left: 220px;
+    }
+
+    .titulo-img {
+      position: absolute;
+      left: 145px;
+      top: 50px;
+    }
+
+    .titulo-img img {
+      width: 65px;
+      height: 65px;
+    }
+
+    .user-icon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .user-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .container {
+      margin: 120px;
+      padding: 40px;
+      background: #8a0052;
+      border-radius: 16px;
+      color: #000;
+      position: relative;
+    }
+
+    .botoes-superiores {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .botao-circulo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #d37b9d;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .botao-circulo:hover {
+      background-color: #c05c8b;
+    }
+
+    .add-btn {
+      display: inline-block;
+      background-color: #d11b7d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 25px;
+      right: 25px;  
+      display: block;
+      margin-left: auto;
+      margin-right: 15px;
+    }
+
+    .add-btn:hover {
+      background-color: #b10a65;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 15px 15px;
+      text-align: center;
+    }
+
+    td {
+      padding: 20px;
+      font-size: 22px;
+      border-radius: 2px;
+      font-weight: bold;
+    }
+
+    .nome {
+      background: #fcb1b1;
+      width: 30%;
+    }
+
+    .valor {
+      background: #fcd4d4;
+      width: 40%;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+      color: #333;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    input:focus {
+      box-shadow: 0 0 8px #d98ca2;
+    }
+
+    .botao {
+      width: 15%;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 2px;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+
+    .positivo {
+      background: #a6d7a6;
+    }
+
+    .negativo {
+      background: red;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <h2 class="titulo">Objetivos Financeiros</h2>
+
+  <div class="titulo-img">
+    <img src="pins/cofre porquinho.png" alt="Ícone Financeiro">
+  </div>
+
+  <div class="user-icon">
+    <img src="pins/user.png" alt="Usuário">
+  </div>
+
+  <div class="container">
+    <div class="botoes-superiores">
+      <div class="botao-circulo">⋯</div>
+      <div class="botao-circulo" onclick="resetarTabela()">↻</div>
+    </div>
+
+    <button class="add-btn" onclick="addItem()">+ Adicionar Item</button>
+
+    <table id="tabela"></table>
+  </div>
+
+  <script>
+    const tabela = document.getElementById('tabela');
+
+   
+    addItem();
+
+    function addItem() {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class='nome'><input type='text' placeholder='Digite...'></td>
+        <td class='valor'><input type='number' placeholder='Valor gasto'></td>
+        <td class='botao positivo' onclick='toggle(this)'>💵</td>
+      `;
+      tabela.appendChild(tr);
+    }
+
+    function toggle(btn) {
+      if (btn.classList.contains('positivo')) {
+        btn.classList.remove('positivo');
+        btn.classList.add('negativo');
+        btn.textContent = '- 💸';
+      } else {
+        btn.classList.remove('negativo');
+        btn.classList.add('positivo');
+        btn.textContent = '💵';
+      }
+    }
+
+    function resetarTabela() {
+      tabela.innerHTML = '';
+      addItem();
+    }
+  </script>
+</body>
+</html>
+
+

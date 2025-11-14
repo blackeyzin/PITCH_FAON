@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anotações - FOAN</title>
+  <link rel="icon" href="pins/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/anotacoes.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+
+    <!-- TOPO -->
+    <header class="header">
+      <div class="logo-area">
+        <img src="pins/logo.png" alt="Logo FOAN" class="logo">
+        <h1>FOAN</h1>
+      </div>
+      <h2 class="titulo">Anotações</h2>
+      <div class="user-area">
+        <img src="pins/user.png" alt="Usuário" class="user-icon">
+      </div>
+    </header>
+
+    <!-- PAINEL PRINCIPAL -->
+    <div class="notes-panel">
+      <div id="notes-container" class="notes-container">
+
+        <!-- Notas de exemplo -->
+        <div class="note-card example-note">
+          <span class="note-options">&#8943;</span>
+          <span class="note-delete">×</span>
+          <textarea class="note-content-editable" placeholder="Clique para escrever..."></textarea>
+        </div>
+
+        <div class="note-card example-note">
+          <span class="note-options">&#8943;</span>
+          <span class="note-delete">×</span>
+          <textarea class="note-content-editable" placeholder="Clique para escrever..."></textarea>
+        </div>
+
+        <div class="note-card example-note">
+          <span class="note-options">&#8943;</span>
+          <span class="note-delete">×</span>
+          <textarea class="note-content-editable" placeholder="Clique para escrever..."></textarea>
+        </div>
+
+        <div class="note-card example-note">
+          <span class="note-options">&#8943;</span>
+          <span class="note-delete">×</span>
+          <textarea class="note-content-editable" placeholder="Clique para escrever..."></textarea>
+        </div>
+      </div>
+
+      <!-- BOTÕES DE CONTROLE -->
+      <div class="control-area">
+        <button id="add-button" class="add-button">+</button>
+        <input type="text" id="note-input" placeholder="Espaço para input de linha (Regra 3)...">
+        <div class="image-space-indicator">
+          <p>Espaço para adição de imagens.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="anotacoes.js"></script>
+</body>
+</html>
+

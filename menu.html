@@ -7,177 +7,24 @@
   <title>Menu - FOAN</title>
   <link rel="stylesheet" href="css/menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    /* ===== RESET ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Brasika', serif;
-      background-color: #e8cace;
-    }
-
-    /* ===== CONTAINER PRINCIPAL ===== */
-    .menu-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-    }
-
-    /* ===== COLUNA ESQUERDA ===== */
-    .esquerda {
-      flex: 1 1 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .topo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-    }
-
-    .logo {
-      width: 50px;
-      height: 50px;
-    }
-
-    .nome {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .user-icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .painel.card {
-      width: 100%;
-      max-width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .painel.card img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .painel.card p {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    /* ===== COLUNA DIREITA ===== */
-    .direita {
-      flex: 2 1 300px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-
+    /* 🔹 EFEITO DE ANIMAÇÃO NOS CARDS */
     .card {
-      width: 100%;
-      max-width: 180px;
-      background-color: #9a0057;
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .card img {
-      width: 60px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    /* ===== RESPONSIVIDADE ===== */
-    @media (max-width: 768px) {
-      .menu-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .direita {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      }
-
-      .painel.card {
-        max-width: 180px;
-      }
+    .card:active {
+      transform: scale(0.96);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      transition: transform 0.1s ease;
     }
-
-    @media (max-width: 480px) {
-      .topo {
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      .nome {
-        font-size: 20px;
-      }
-
-      .logo, .user-icon {
-        width: 40px;
-        height: 40px;
-      }
-
-      .card img {
-        width: 50px;
-      }
-
-      .card p {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      .direita {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 10px;
-      }
-
-      .painel.card {
-        max-width: 150px;
-        padding: 15px;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -203,23 +50,28 @@
         <img src="pins/calendario img.png" alt="Calendário">
         <p>Calendário</p>
       </div>
-      <div class="card urgente">
+
+      <div class="card urgente" onclick="window.location.href='Urgente.html'">
         <img src="pins/relogio.png" alt="Urgente">
         <p>Urgente</p>
       </div>
-      <div class="card anotacoes">
+
+      <div class="card anotacoes" onclick="window.location.href='anotações.html'">
         <img src="pins/anotacoes.png" alt="Anotações">
         <p>Anotações</p>
       </div>
-      <div class="card diarios">
+
+      <div class="card diarios" onclick="window.location.href='Objetivos diarios.html'">
         <img src="pins/objetivos diarios.png" alt="Objetivos Diários">
         <p>Objetivos Diários</p>
       </div>
-      <div class="card semanais">
+
+      <div class="card semanais" onclick="window.location.href='ObjetivosSemanais.html'">
         <img src="pins/objetivos semanais.png" alt="Objetivos Semanais">
         <p>Objetivos Semanais</p>
       </div>
-      <div class="card financeiros">
+
+      <div class="card financeiros" onclick="window.location.href='Objetivos Financeiros.html'">
         <img src="pins/objetivos financeiros.png" alt="Objetivos Financeiros">
         <p>Objetivos Financeiros</p>
       </div>
